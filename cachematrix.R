@@ -1,7 +1,8 @@
 
 makeCacheMatrix <- function(x = matrix()) {
-
 	  ## function creates a special "matrix" object that can cache its inverse
+	  ## I just modeled this function off of the makeVector function in the assignment description
+	  ## instead of "mean" I used the function "solve" and made the special "vector" which is actually a list
 	  m <- NULL
 	  set <- function(y) {
 		  x <<- y
@@ -14,6 +15,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 cacheSolve <- function(x, ...) {
+        ## I modeled this function off of the cachemean function in the assignment description
+        ## I pulled the solve function here to get the inverse of the former function
         ## computes the inverse of the special "matrix" returned by makeCacheMatrix
 	  ## if the inverse has already been calculated (and the matrix has not changed)
 	  ## then cacheSolve should retrieve the inverse from the cache
